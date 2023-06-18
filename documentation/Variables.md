@@ -15,7 +15,8 @@ echo $V1
 echo $V2
 ```
 
-Variables can be store in a file and be passed all toguether:
+Variables can be stored in a file and be passed all toguether:
 
 ```bash
 docker run --name <prueba>--env-file <variables_filename> <image_name>
+```
