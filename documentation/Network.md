@@ -34,4 +34,51 @@ docker image inspect <image_name> | grep ExposedPorts
 
 - Name and driver
 
+```bash
+docker network create <network_name>
+docker ls
+```
 
+```bash
+nmcli con
+ip a | more
+```
+
+### Delete a Network
+
+```bash
+docker rm <network_name>
+```
+
+### Associate a network to the container
+
+```bash
+docker run --network <network_name> <image_name>
+```
+
+### Network configuration
+
+```bash
+docker network create --subnet=<> --gateway=<> --ip-range<> <network_name>
+```
+
+### Link networks
+
+Interesting:
+
+```bash
+docker rm `docker ps -aq`
+```
+
+#### Legacy container links
+
+```bash
+docker run --link <container_name_target>:<alias> <image_name>
+```
+#### 
+
+Example:
+
+```bash
+docker run -d --name sql_server -p 3100:2200 -e MYSQL_ROOT_PASSWORD=crack --network redCasa mysql
+```
