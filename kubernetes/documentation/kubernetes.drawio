@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram name="K8S" id="Vjpy3lBuLtXeKduoaiA-">
-        <mxGraphModel dx="1515" dy="5816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="1">
+        <mxGraphModel dx="710" dy="5023" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="1">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -123,7 +123,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="61Wq1ktY6V_UcU-5DUyr" name="History">
-        <mxGraphModel dx="2020" dy="1513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -302,14 +302,14 @@
         </mxGraphModel>
     </diagram>
     <diagram id="g4vl7E_53OjvzNjKToBk" name="ReplicaSet">
-        <mxGraphModel dx="1026" dy="305" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-3" style="edgeStyle=none;html=1;" edge="1" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-2">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-3" style="edgeStyle=none;html=1;" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-6" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-4">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-6" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-4" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="580" y="500"/>
@@ -317,7 +317,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-5">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cfL1AlVG3jSyWJQlg9pp-1" target="cfL1AlVG3jSyWJQlg9pp-5" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="580" y="500"/>
@@ -325,39 +325,39 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-1" value="RS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-1" value="RS" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="520" y="400" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-2" value="&lt;h1&gt;ReplicaSet (RS)&lt;/h1&gt;&lt;p&gt;Es el encargado de crear y mantener N pods en el tiempo.&lt;/p&gt;&lt;p&gt;Recibe un template en YAML de lo que seria el pod a crear y le decimos el numero que pods con ese template que tiene que crear y el se encarga de crearlos y mantenertlos, es decir, si uno muere, levanta otro nuevo manteniendo siempre el numero de pods que le hemos dicho que cree.&lt;/p&gt;&lt;p&gt;Para mantener los pods, el RS necesita de los &lt;b&gt;&lt;i&gt;&lt;u&gt;labels&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;. Siempre mirara si hay algun pod con ese label y sino lo hay lo crea. Ademas utiliza el &lt;b&gt;&lt;i&gt;&lt;u&gt;Owner reference&lt;/u&gt;&lt;/i&gt;&lt;/b&gt; que se encarga de identifcar el dueño del pod es decir, que RS ha creado ese pod.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-2" value="&lt;h1&gt;ReplicaSet (RS)&lt;/h1&gt;&lt;p&gt;Es el encargado de crear y mantener N pods en el tiempo.&lt;/p&gt;&lt;p&gt;Recibe un template en YAML de lo que seria el pod a crear y le decimos el numero que pods con ese template que tiene que crear y el se encarga de crearlos y mantenertlos, es decir, si uno muere, levanta otro nuevo manteniendo siempre el numero de pods que le hemos dicho que cree.&lt;/p&gt;&lt;p&gt;Para mantener los pods, el RS necesita de los &lt;b&gt;&lt;i&gt;&lt;u&gt;labels&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;. Siempre mirara si hay algun pod con ese label y sino lo hay lo crea. Ademas utiliza el &lt;b&gt;&lt;i&gt;&lt;u&gt;Owner reference&lt;/u&gt;&lt;/i&gt;&lt;/b&gt; que se encarga de identifcar el dueño del pod es decir, que RS ha creado ese pod.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="400" y="90" width="360" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-4" value="Pod 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-4" value="Pod 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="400" y="560" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-5" value="Pod 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-5" value="Pod 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="640" y="560" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-11" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-11" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="450" y="460" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-12" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-12" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="660" y="460" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-14" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-14" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="490" y="520" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="cfL1AlVG3jSyWJQlg9pp-15" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="cfL1AlVG3jSyWJQlg9pp-15" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="620" y="520" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="3OfP-L4JUWNzszV0UfFD" name="Deployment">
-        <mxGraphModel dx="1246" dy="370" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-10" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4E8l1dpRFX3Ebn8TDlHh-1" target="MOwr-KYxJ_QCx4cnH7gd-3">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-10" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4E8l1dpRFX3Ebn8TDlHh-1" target="MOwr-KYxJ_QCx4cnH7gd-3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="700" y="460"/>
@@ -365,13 +365,13 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-14" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4E8l1dpRFX3Ebn8TDlHh-1" target="MOwr-KYxJ_QCx4cnH7gd-11">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-14" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="4E8l1dpRFX3Ebn8TDlHh-1" target="MOwr-KYxJ_QCx4cnH7gd-11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4E8l1dpRFX3Ebn8TDlHh-1" value="Deployment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+                <mxCell id="4E8l1dpRFX3Ebn8TDlHh-1" value="Deployment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="640" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-1" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MOwr-KYxJ_QCx4cnH7gd-3" target="MOwr-KYxJ_QCx4cnH7gd-4">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-1" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="MOwr-KYxJ_QCx4cnH7gd-3" target="MOwr-KYxJ_QCx4cnH7gd-4" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="460" y="600"/>
@@ -379,7 +379,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-2" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MOwr-KYxJ_QCx4cnH7gd-3" target="MOwr-KYxJ_QCx4cnH7gd-5">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-2" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="MOwr-KYxJ_QCx4cnH7gd-3" target="MOwr-KYxJ_QCx4cnH7gd-5" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="460" y="600"/>
@@ -387,29 +387,120 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-3" value="RS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-3" value="RS" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="400" y="500" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-4" value="Pod 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-4" value="Pod 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="280" y="660" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-5" value="Pod 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-5" value="Pod 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" parent="1" vertex="1">
                     <mxGeometry x="520" y="660" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-6" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-6" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="330" y="560" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-7" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-7" value="OwnerReference" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="540" y="560" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-8" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-8" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="370" y="620" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-9" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-9" value="Label" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="500" y="620" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-11" value="&lt;h1&gt;Deployment&lt;/h1&gt;&lt;p&gt;Nos permite tener la aplicación siempre arriba.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Max enable Cuantos pods voy a permitir que mueran. En porcentaje.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Max Search: Cuanto voy a permitir adicional al 100% para que se creen pods nuevos&lt;/p&gt;&lt;p&gt;Hay un limite de cuantos replica set mantiene un deployment, por defecto son 3.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                <mxCell id="MOwr-KYxJ_QCx4cnH7gd-11" value="&lt;h1&gt;Deployment&lt;/h1&gt;&lt;p&gt;Nos permite tener la aplicación siempre arriba.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Max enable Cuantos pods voy a permitir que mueran. En porcentaje.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Max Search: Cuanto voy a permitir adicional al 100% para que se creen pods nuevos&lt;/p&gt;&lt;p&gt;Hay un limite de cuantos replica set mantiene un deployment, por defecto son 3.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="550" y="70" width="300" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="MmYhrvCnXEu9aoMPd6Lj" name="NameSpaces">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="_Ol4vHjehYanmtwKKT7e" name="Limites">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="vu8PdiifGctb6nJQN3d_-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="420" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="vu8PdiifGctb6nJQN3d_-2" value="&lt;h1&gt;Limites RAM y CPU&lt;/h1&gt;&lt;p&gt;Si un pod no tiene ningun limite, va a poder consumir todos los recursos del nodo y esto puede provocar que el nodo se caiga&lt;/p&gt;&lt;p&gt;Limits: Nuestro pod va a poder acceder hasta lo que ponga aqui pero sin ser garantizado.&lt;/p&gt;&lt;p&gt;Request: Cuanto vamos a darle al pod en recursos garantizados&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="180" width="300" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ygRETmnCXfuKufA0E0f4-1" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;QoS (Quality of Service)&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;Son clases en las que entra un POD dependiendo de su configuraion en limite:&lt;/p&gt;&lt;p&gt;- Guaranteed: request = limit&lt;/p&gt;&lt;p&gt;- Burstable: Puede aumnentar o subir. Limit &amp;gt; request&lt;/p&gt;&lt;p&gt;- Best effor: No establece limite (Mas peligrosos)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="400" width="300" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="5JPJJMfZOaz_-Fi9tfKP" name="LimitRange">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="60IhLTpuOP4_Bi_uKIoY-1" value="&lt;h1&gt;Limit Range&lt;/h1&gt;&lt;div&gt;Si no le colocan un valor al pod, el limit range le establece por defecto al pod los valores que le digamos&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Tambien podemos poner limites de maximos y minimos y si se quiere crear un pod que no entre en el rango, dara un error de creacion.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="120" width="410" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="PvGRpB6VhPz4fKmE28mf" name="ResourceQuota">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="yzu8LZlv98h4uSBY-m_--1" value="&lt;h1&gt;ResourceQuota&lt;/h1&gt;&lt;p&gt;Funciona a nivel de namespace. Establece limites de CPU y RAM a nivel de namespace.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="110" width="190" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="68IcQed29ZINGsqEOuFA" name="ConfigMapAndSecrets">
+        <mxGraphModel dx="592" dy="285" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="JHuXyzazGw86aIbgy32p-4" style="edgeStyle=none;html=1;" edge="1" parent="1" source="JHuXyzazGw86aIbgy32p-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="546.5116279069769" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="JHuXyzazGw86aIbgy32p-1" value="&lt;h1&gt;ConfigMaps&lt;/h1&gt;&lt;p&gt;Es un objeto de kubernets que nos permite guarda infomacion para que se la pasemos a los pods.&lt;/p&gt;&lt;p&gt;Guarda informacion en forma de clave : valor&lt;/p&gt;&lt;p&gt;Para paserselo a los pods hay dos maneras:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A traves de volumenes&lt;/li&gt;&lt;li&gt;A traves de variables de entorno&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="120" width="280" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="JHuXyzazGw86aIbgy32p-5" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JHuXyzazGw86aIbgy32p-2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="610" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="JHuXyzazGw86aIbgy32p-2" value="&lt;h1&gt;Secrets&lt;/h1&gt;&lt;p&gt;Es un objeto de kubernets que nos permite guarda infomacion para que se la pasemos a los pods.&lt;/p&gt;&lt;p&gt;Guarda informacion en forma de clave : valor&lt;/p&gt;&lt;p&gt;Para paserselo a los pods hay dos maneras:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A traves de volumenes&lt;/li&gt;&lt;li&gt;A traves de variables de entorno&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="120" width="280" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="JHuXyzazGw86aIbgy32p-6" value="&lt;h1&gt;Diferencias&lt;/h1&gt;&lt;p&gt;Los secrets almacenan informacion sensitiva mientras que l&lt;span style=&quot;background-color: initial;&quot;&gt;os configmaps guardan informacion visible por cualquiera&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Los secrets nunca mostraran el contenido el contenido de los secretos. Solo se podra ver la clave y el valor (encriptado en base 64&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="480" y="400" width="330" height="170" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="afGijC_9ItBENeSy_FCG" name="Volumenes">
+        <mxGraphModel dx="710" dy="342" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="IBDp6nYBeBehe96dBt7g-1" value="&lt;h1&gt;Volumenes&lt;/h1&gt;&lt;div&gt;Nos permite hacer aplicaciones stateful o con estados.&amp;nbsp;&lt;/div&gt;&lt;p&gt;&lt;b&gt;EmptyDir&lt;/b&gt;: Monta en el Pod el directorio. El volumen esta ligado al lifecycle del pod. La informacion no moriria si mueren los contenedores pero si muere el pod, el volumen muere.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;HostPath&lt;/b&gt;: Monta el directorio en el nodo, es decir, el lifecycle depende del nodo y tiene dependencia con el nodo en el que se encuentra.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;CloudVolumes&lt;/b&gt;: Los discos de amazon son EBS y los de google cloud son PD. El volumen vendria de AWS o de GCP. Esto tiene el problema que tiene que conocoer mucha informacion sobre como esta el disco de AWS o GCP formado.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="120" width="390" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="IBDp6nYBeBehe96dBt7g-3" value="&lt;h1&gt;PV y PVC&lt;/h1&gt;&lt;p&gt;PV: Es el que se conecta y crea el recurso en cloud&lt;/p&gt;&lt;p&gt;PVC: Es la reclamacion de un PV. Utiliza selector y size.&lt;/p&gt;&lt;p&gt;Cuando creamos un PV, lo ideal es consumir todo el espacio desde PVC&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="170" width="230" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="IBDp6nYBeBehe96dBt7g-4" value="&lt;h1&gt;PV y PVC&lt;/h1&gt;&lt;p&gt;PV: Es el que se conecta y crea el recurso en cloud&lt;/p&gt;&lt;p&gt;PVC: Es la reclamacion de un PV. Utiliza selector y size.&lt;/p&gt;&lt;p&gt;Cuando creamos un PV, lo ideal es consumir todo el espacio desde PVC&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=default;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="390" width="230" height="180" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
